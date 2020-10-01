@@ -1,5 +1,17 @@
 @import '~antd/dist/antd.css';
 
+input {
+  height: 35px;
+  border-radius: 5px;
+  border: 3px solid #d9d9d9;
+  padding: 4px 11px;
+}
+input:focus {
+  border: 2px solid #bbdcf3;
+  box-shadow: 0 0px 2px #bbdcf3;
+  outline: 0 none;
+}
+
 .mainPage {
   padding-left: 40px;
   padding-top: 40px;
@@ -7,14 +19,78 @@
     height: 56px;
     width: 500px;
     margin-bottom: 5px;
-    label {
-      color: gray;
+    .inputWithScroll__input {
+      display: flex;
+      flex-direction: column;
+      label {
+        color: gray;
+      }
+    }
+  }
+
+  .inputWithScroll.error {
+    display: flex;
+    width: 800px;
+    .inputWithScroll__input {
+      width: 500px;
+      label {
+        color: #ff4b4b;
+      }
+      input {
+        border: 2px solid #ff4b4b;
+      }
     }
 
-    input {
+    .inputWithScroll__error {
+      width: 280px;
+      margin-left: 20px;
+      margin-top: 26px;
+      height: 20px;
+      font-size: 16px;
+      color: #ff4b4b;
+    }
+  }
+
+  .mainPage__input-phone  {
+    width: 500px;
+    height: 56px;
+    margin-bottom: 5px;
+    .special-label {
+      color: gray;
+    }
+    .form-control {
+      width: 500px;
       height: 35px;
       border-radius: 5px;
       border: 3px solid #d9d9d9;
+      padding: 4px 11px;
+    }
+    .form-control:focus {
+      border: 2px solid #bbdcf3;
+      box-shadow: 0 0px 2px #bbdcf3;
+      outline: 0 none;
+    }
+  }
+
+  .mainPage__input-phone.error {
+    display: flex;
+    width: 800px;
+
+    .special-label {
+      color: #ff4b4b;
+    }
+
+    .form-control {
+      border: 2px solid #ff4b4b;
+    }
+
+    .react-tel-input__error {
+      width: 280px;
+      margin-left: 20px;
+      margin-top: 26px;
+      height: 20px;
+      font-size: 16px;
+      color: #ff4b4b;
     }
   }
 
@@ -24,10 +100,76 @@
 
   .mainPage__section4 {
     .mainPage__subSection2 {
-      .ant-row {
+      .inputWithScroll__input {
+        margin-top: 10px;
+      }
+
+
+      .mainPage__list-COS {
+        width: 500px;
+        .mainPage__list-COS-wrapper {
+          height: 70px;
+          display: flex;
+          margin-bottom: 10px;
+
+          .inputWithScroll {
+            width: 500px;
+            height: 70px;
+
+            input {
+              width: 150px;
+            }
+          }
+
+          span {
+            height: 35px;
+            margin-top: 37px;
+            margin-left: -340px;
+            cursor: pointer;
+            color: #3989ec;
+          }
+        }
+
+        .mainPage__list-result {
+          display: flex;
+          flex-wrap: wrap;
+          div {
+            display: flex;
+            align-items: center;
+            margin-right: 5px;
+            padding: 0 5px;
+            margin-bottom: 10px;
+            background: #c0dfff;
+
+            .delete {
+              margin-left: 10px;
+              color: #2c6dff;
+              font-size: 18px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      .ant-checkbox-group {
         display: block;
+        .ant-row {
+          display: block;
+        }
+        // .ant-checkbox-group-item {
+        //   display: block;
+        //   margin-right: 0;
+        // }
       }
     }
+
+
+      .ant-radio-wrapper {
+        display: block;
+      }
+
+
+
   }
 
   .mainPage__submit {
@@ -38,16 +180,6 @@
     margin: 20px 0;
   }
 
-  .ant-radio-wrapper {
-    display: block;
-  }
 
-  .ant-checkbox-group {
-    display: block;
-    .ant-checkbox-group-item {
-      display: block;
-      margin-right: 0;
-    }
-  }
 
 }

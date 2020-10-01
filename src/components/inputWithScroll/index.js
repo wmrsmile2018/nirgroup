@@ -1,7 +1,6 @@
 import React from 'react';
 import ScrollIntoViewIfNeeded from 'react-scroll-into-view-if-needed';
 import classNames from 'classnames';
-import { Input } from 'antd';
 
 const InputWithScroll = ({
   className, error, errorText, firstError, handleOnChange, label, name,
@@ -12,27 +11,29 @@ const InputWithScroll = ({
     {[`inputWithScroll-${className}`]: className},
     {[`error`]: error}
   )
-  console.log(firstError);
+
   return (
     <ScrollIntoViewIfNeeded
-      options={{block: 'start'}}
+      options={{block: "start"}}
       active={firstError === name}
       className={classes}
     >
 
-      <label htmlFor={name}>
-        {label}
-      </label>
+      <div className="inputWithScroll__input">
+        <label htmlFor={name}>
+          {label}
+        </label>
 
-      <Input
-        type="text"
-        name={name}
-        value={value}
-        onChange={handleOnChange}
-      />
+        <input
+          type="text"
+          name={name}
+          value={value}
+          onChange={handleOnChange}
+        />
+      </div>
 
       {error &&
-        <p className={`inputWithScroll__error-${name}`}>
+        <p className={`inputWithScroll__error inputWithScroll__error-${name}`}>
           { errorText }
         </p>
       }
