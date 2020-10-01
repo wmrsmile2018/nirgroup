@@ -6,9 +6,16 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "antd": "^4.6.6",
+    "classnames": "^2.2.6",
+    "formik": "^2.1.6",
+    "lodash": "^4.17.20",
+    "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.3"
+    "react-fast-compare": "^3.2.0",
+    "react-scripts": "3.4.3",
+    "react-scroll-into-view-if-needed": "^2.1.7"
   },
   "scripts": {
     "start": "react-scripts start",
